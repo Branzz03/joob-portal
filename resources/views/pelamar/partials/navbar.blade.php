@@ -10,10 +10,13 @@
             {{-- PERUBAHAN: Menghapus 'mx-auto' dan menambahkan 'me-auto' untuk mendorong menu ke kiri --}}
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::routeIs('home') ? 'active fw-bold' : '' }}" href="{{ route('home') }}">Beranda</a>
+                    <a class="nav-link {{ Request::routeIs('home') ? 'active fw-bold' : '' }}" href="{{ route('home') }}">BERANDA</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('berita.index') }}" class="nav-link {{ Request::routeIs('berita.index') ? 'active fw-bold' : '' }}">Berita Terkini</a>
+                    <a href="{{ route('berita.index') }}" class="nav-link {{ Request::routeIs('berita.index') ? 'active fw-bold' : '' }}">BERITA TERKINI</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('toko-umkm.index') }}" class="nav-link {{ Request::routeIs('toko-umkm.index') ? 'active fw-bold' : '' }}">TOKO UMKM</a>
                 </li>
                 
                 @if(Auth::check() && Auth::user()->role === 'pelamar')
@@ -65,11 +68,14 @@
             </div>
             <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-start flex-grow-1 pe-3 mb-3">
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::routeIs('home') ? 'active fw-bold' : '' }}" href="{{ route('home') }}">BERANDA</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('berita.index') }}" class="nav-link {{ Request::routeIs('berita.index') ? 'active fw-bold' : '' }}">BERITA TERKINI</a>
+                </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ Request::routeIs('home') ? 'active fw-bold' : '' }}" href="{{ route('home') }}">Beranda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ route('berita.index') }}" class="nav-link {{ Request::routeIs('berita.index') ? 'active fw-bold' : '' }}">Berita Terkini</a>
+                        <a href="{{ route('toko-umkm.index') }}" class="nav-link {{ Request::routeIs('toko-umkm.index') ? 'active fw-bold' : '' }}">TOKO UMKM</a>
                     </li>
 
                     @if(Auth::check() && Auth::user()->role === 'pelamar')
